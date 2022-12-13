@@ -1,0 +1,109 @@
+' Gambas class file
+
+
+' ESTADO / ATRIBUTOS
+' Queremos almacenar si está abierta o cerrada.
+
+Private bAbierta As Boolean ' si es true, la caja fuerte es abierta
+Private clave As String
+Public dinero As Integer
+
+
+' COMPORTAMIENTOS / METODOS
+
+'Constructor (por clase)
+'El constructor normalmente inicializa los atributos con unos estados iniciales.
+Public Sub _new() ' --> Si pongo dentro de los parentesis algo, signigica que desde fuera me dan la información, el usuario.
+  'Inicializar los valores.
+  'No hace falta hacer ninguna operación, por eso es sub.
+  bAbierta = False 'Empieza cerrada
+  clave = "0000" 'La clave por defecto es 0000
+  dinero = "0"
+End 
+
+
+'Resto métodos
+
+'Asignar clave nueva
+
+Public Function comprobarClave(antiguaClave As String) As Boolean 'Nos dira si es true, que todo a salido bien. Si no, que algo ha salido mal. 
+  'Es function porque tiene un proceso con varias posibilidades devueltas.
+  'Se nos pedirán ambas claves desde fuera, una nos la dará el propio programa, la otra el usuario.
+  If (antiguaClave = clave) Then
+    Return True
+   Else 
+    Return False
+  Endif
+'Se ha devuelto, es decir, tengo un return en todas las ramas del if? Si
+
+'Otra forma de hacerlo:
+  'Dim resultado As Boolean
+  
+  'resultado = False
+  
+  'If(antiguaClave = clave) Then
+    'clave = nuevaClave
+    'resultado = true
+  'Endif
+  'Return resultado
+End
+
+Public Function actualizarClave(nuevaClave As String) As Boolean
+    If (nuevaClave.Len = 4) Then 
+      
+    clave = nuevaClave
+    
+    Return True
+    Endif
+End
+
+
+
+'Abrir caja fuerte
+Public Function abrirCaja(nclave As String) As Boolean
+  If (nclave = clave) Then 
+    bAbierta = True
+    Return True
+    
+    Else 
+    Return False
+    
+  Endif
+  
+'Otra forma de hacerlo:
+  'Dim resultado As Boolean
+  
+  'resultado = False
+  
+  'If(nclave = clave) Then
+    'resultado = true
+  'Endif
+  'Return resultado
+End 
+
+'Cerrar caja fuerte
+
+Public Function anadirDinero(dineroEntrante As Integer) As Boolean
+
+  If bAbierta = True Then
+    dinero = dinero + dineroEntrante   
+    Return True
+    Else 
+    Return False
+    
+  Endif
+
+End 
+
+
+
+Public Sub cerrarCaja()
+'Sub porque queremos cerrarla bajo todo concepto, sin condicional, sin nada devuelto.
+
+  bAbierta = False
+ 
+  
+  
+End
+
+

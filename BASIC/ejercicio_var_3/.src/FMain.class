@@ -1,0 +1,10 @@
+' Gambas class file
+
+Private nombre As String 
+
+
+Public Sub Button1_Click()
+  nombre = "Juanje"
+  TL1.Text = "Tu nombre es " & nombre
+
+End

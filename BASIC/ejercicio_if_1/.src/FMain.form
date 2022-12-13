@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,28,29)
+  { TextLabel1 TextLabel
+    MoveScaled(8,3,12,3)
+    Text = ("¿Qué hora es?")
+  }
+  { TB1 TextBox
+    MoveScaled(2,7,24,4)
+  }
+  { TL2 TextLabel
+    MoveScaled(5,21,18,3)
+  }
+  { Button1 Button
+    MoveScaled(6,14,16,4)
+    Text = ("Ingresar")
+  }
+}

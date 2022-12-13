@@ -1,0 +1,12 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,39,12)
+  { Button1 Button
+    MoveScaled(11,6,16,4)
+    Text = ("¡Hola!")
+  }
+  { TL1 TextLabel
+    MoveScaled(5,2,29,3)
+  }
+}

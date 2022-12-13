@@ -1,0 +1,28 @@
+' Gambas class file
+
+Private hora As Integer
+
+
+Public Sub Button1_Click()
+
+hora = TB1.Text
+
+If hora >= 6 And hora <= 12 Then 
+  TL2.Text = "Buenos días"
+Endif
+
+If hora >= 13 And hora <= 20 Then 
+  TL2.Text = "Buenas tardes"
+Endif
+
+If hora >= 21 And hora < 24 Or hora <= 5 And hora >= 0 Then 
+  TL2.Text = "Buenas noches"
+Endif
+
+If hora >= 24 Or hora < 0 Then 
+  TL2.Text = "Incorrecto"
+Endif
+
+    
+End
+

@@ -1,0 +1,16 @@
+' Gambas class file
+
+Public Sub Bjugar_Click()
+
+  Crono.Enabled = True
+
+End
+
+
+
+Public Sub Crono_Timer()
+
+    DrawingArea1.Background = Color.RGB(Rand(0, 255), Rand(0, 255), Rand(0, 255))
+    DrawingArea1.Refresh()
+
+End

@@ -1,0 +1,41 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,43,39)
+  { LResult TextLabel
+    MoveScaled(3,3,54,7)
+    Text = ("Los resultados para X = 200, Y = 111 son:")
+  }
+  { TL1 TextLabel
+    MoveScaled(8,12,8,3)
+    Text = ("Suma:")
+  }
+  { TL2 TextLabel
+    MoveScaled(8,16,8,3)
+    Text = ("Resta:")
+  }
+  { TL3 TextLabel
+    MoveScaled(8,20,15,3)
+    Text = ("Multiplicacion:")
+  }
+  { TL4 TextLabel
+    MoveScaled(8,24,15,3)
+    Text = ("Division:")
+  }
+  { Button1 Button
+    MoveScaled(12,30,16,4)
+    Text = ("Calcular")
+  }
+  { TLS TextLabel
+    MoveScaled(27,12,12,3)
+  }
+  { TLR TextLabel
+    MoveScaled(27,16,12,3)
+  }
+  { TLM TextLabel
+    MoveScaled(27,20,12,3)
+  }
+  { TLD TextLabel
+    MoveScaled(27,24,12,2)
+  }
+}

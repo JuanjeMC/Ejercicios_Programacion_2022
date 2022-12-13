@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,31,31)
+  { TextLabel1 TextLabel
+    MoveScaled(1,4,29,3)
+    Text = ("Introduza día de la semana (1-7)")
+  }
+  { TB1 TextBox
+    MoveScaled(3,8,24,4)
+  }
+  { TL2 TextLabel
+    MoveScaled(12,22,18,3)
+  }
+  { Button1 Button
+    MoveScaled(7,15,16,4)
+    Text = ("Ingresar")
+  }
+}

@@ -1,0 +1,50 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,32,48)
+  { Button1 Button
+    MoveScaled(16,7,5,4)
+    Text = ("+")
+  }
+  { Button2 Button
+    MoveScaled(9,7,5,4)
+    Text = ("-")
+  }
+  { TL1 TextLabel
+    MoveScaled(10,13,5,4)
+    Text = ("90")
+  }
+  { TL2 TextLabel
+    MoveScaled(16,13,8,5)
+    Text = ("mg/dl")
+  }
+  { BT3 Button
+    MoveScaled(6,17,19,5)
+    Text = ("Aceptar")
+  }
+  { TL3 TextLabel
+    MoveScaled(2,24,28,9)
+    Font = Font["Bold"]
+    Background = Color.White
+    Foreground = Color.LinkForeground
+  }
+  { L1 Label
+    MoveScaled(1,1,30,3)
+    Font = Font["Bold"]
+    Text = ("Ingrese nivel de azúcar en sangre:")
+  }
+  { B3 Button
+    MoveScaled(6,35,8,4)
+    Enabled = False
+    Text = ("Si")
+  }
+  { B4 Button
+    MoveScaled(17,35,8,4)
+    Enabled = False
+    Text = ("No")
+  }
+  { Button3 Button
+    MoveScaled(6,41,19,4)
+    Text = ("Reset")
+  }
+}

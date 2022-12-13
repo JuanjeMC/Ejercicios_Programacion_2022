@@ -1,0 +1,75 @@
+' Gambas class file
+
+Private N As Integer
+
+Public Sub Form_Open()
+
+  FMain.Width = 224
+  FMain.Height = 238
+
+  'Panel1.Width = Fmain.Width *(0.8)
+  'Panel
+
+End
+
+Public Sub Button1_Click()
+
+TL1.Text = TL1.Text + 10
+
+End
+
+Public Sub Button2_Click()
+
+TL1.Text = TL1.Text - 10
+
+End
+
+Public Sub BT3_Click()
+
+N = TL1.Text
+
+If N > 70 And N < 180 Then 
+  TL3.Foreground = Color.SoftRoyal
+  TL3.Text = "El paciente no sufre de diabetes."
+  
+    Else If N <= 70 Then 
+      FMain.Height = 336
+      TL3.Foreground = Color.SoftRoyal
+      TL3.Text = "¿Está consciente el sujeto?"
+      B3.Enabled = True
+      B4.Enabled = True
+      
+        Else If N >= 180 Then 
+          TL3.Foreground = Color.Red
+         TL3.Text = "El paciente tiene hiperglucemia, llamar a un familiar o al hospital."
+Endif
+
+End
+
+Public Sub B3_Click()
+TL3.Foreground = Color.Red
+  TL3.Text = "Dar líquidos azucarados de absorción rápida."
+
+End
+
+
+
+Public Sub B4_Click()
+TL3.Foreground = Color.Red
+  TL3.Text = "No dar nada por la boca, llamar a un familiar o al hospital."
+
+
+End
+
+Public Sub Button3_Click()
+N = 90
+  TL1.Text = N
+  TL3.Text = ""
+  B3.Enabled = False
+  B4.Enabled = False
+  TL3.Foreground = Color.SoftRoyal
+  FMain.Height = 238
+
+End
+
+

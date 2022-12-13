@@ -1,0 +1,14 @@
+' Gambas class file
+
+
+
+
+Public Sub Button1_Click()
+
+Dim cAtras As Integer
+
+For cAtras = 20 To 0 Step -1
+  TL1.Text = TL1.Text & cAtras & " "
+Next
+
+End

@@ -1,0 +1,67 @@
+' Gambas class file
+
+Private Pass As String = "0000"
+Private bAbierta As Boolean = False
+
+
+
+Public Sub BCP_Click()
+
+  If TB1.Text = Pass Then 
+    TL1.Foreground = Color.SoftGreen
+    TL1.Text = "Contraseña aceptada."
+    TB1.Enabled = False
+    TB2.Enabled = True
+    BA.Enabled = False
+    BC.Enabled = False
+    BCP.Enabled = False
+    BCP2.Visible = True
+    
+    Else 
+    TL1.Foreground = Color.Red
+    TL1.Text = "Incorrecto."
+  Endif
+
+End
+
+Public Sub BCP2_Click()
+
+  If TB2.Text.Len = 4 Then 
+    TL1.Foreground = Color.SoftGreen
+    TL1.Text = "Contraseña actualizada."
+    Pass = TB2.Text
+    TB1.Enabled = True
+    TB2.Enabled = False
+    BA.Enabled = True
+    BC.Enabled = True
+    BCP.Enabled = True
+    BCP2.Visible = False
+    TB1.Text = ""
+    TB2.Text = ""
+    Else 
+    TL1.Foreground = Color.Red
+    TL1.Text = "Debe contener 4 caracteres."
+  Endif
+
+End
+
+Public Sub BA_Click()
+  
+  If TB1.Text = Pass Then 
+    bAbierta = True
+    TL1.Foreground = Color.SoftGreen
+    TL1.Text = "Caja abierta."
+    Else 
+    TL1.Foreground = Color.Red
+    TL1.Text = "Contraseña incorrecta."
+  Endif
+  
+End
+
+Public Sub BC_Click()
+
+  bAbierta = False
+  TL1.Foreground = Color.SoftGreen
+  TL1.Text = "Caja cerrada."
+
+End

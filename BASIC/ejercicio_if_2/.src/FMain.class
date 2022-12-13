@@ -1,0 +1,41 @@
+' Gambas class file
+
+Private dia As Integer
+
+
+Public Sub Button1_Click()
+
+dia = TB1.Text
+
+If dia >= 1
+  TL2.Text = "Lunes"
+Endif
+
+If dia >= 2
+  TL2.Text = "Martes"
+Endif
+
+If dia >= 3
+  TL2.Text = "Miercoles"
+Endif
+
+If dia >= 4
+  TL2.Text = "Jueves"
+Endif
+
+If dia >= 5
+  TL2.Text = "Viernes"
+Endif
+
+If dia >= 6
+  TL2.Text = "Sabado"
+Endif
+
+If dia >= 7
+  TL2.Text = "Domingo"
+Endif
+
+If dia > 7 Or dia < 1 Then
+  TL2.Text = "Error"
+Endif
+End

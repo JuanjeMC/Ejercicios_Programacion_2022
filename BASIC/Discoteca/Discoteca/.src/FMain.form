@@ -1,0 +1,17 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,91.4286,91.4286)
+  Background = Color.Black
+  { DrawingArea1 DrawingArea
+    MoveScaled(2,2,87,76)
+  }
+  { Bjugar Button
+    MoveScaled(2,79,16,3)
+    Text = ("PLAY")
+  }
+  { Crono #Timer
+    #MoveScaled(82,79)
+    Delay = 100
+  }
+}

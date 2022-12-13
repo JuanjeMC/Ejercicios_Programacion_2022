@@ -1,0 +1,131 @@
+' Gambas class file
+
+Private miCaja As CajaFuerte
+Private dineroAlmacenado As Integer
+Private iPasos As Integer
+
+
+Public Sub Form_Open() 'Cuando le damos al play se inicializa el objeto miCaja, de CajaFuerte
+
+  miCaja = New CajaFuerte
+
+End
+
+
+Public Sub BAbrir_Click()
+
+  'Mirar si han puesto algo potable en el TBPassword
+  'Pasar la contraseña al objeto CajaFuerte
+  'Si me devuelve true, la caja debe estar abierta
+  'En otro caso, la password no va (false)
+If (miCaja.abrirCaja(TBPassword.Text)) Then 'Sustituyo TBPassword.Text dentro de la funcion, en la clase
+LResultado.Foreground = Color.SoftGreen
+  LResultado.Text = "Caja fuerte abierta."
+  BDinero.Enabled = True
+  BTotal.Enabled = True
+  TBIngresar.Enabled = True
+  
+Else 
+  LResultado.Foreground = Color.Red
+  LResultado.Text = "Contraseña incorrecta."
+Endif
+
+
+
+End
+
+
+
+Public Sub BNueva_Click()
+
+
+    
+  If (miCaja.comprobarClave(TBPassword.Text)) Then 
+    LResultado.Foreground = Color.SoftGreen
+    LResultado.Text = "Contraseña correcta, introduzca nueva contraseña."
+    TBnewPassword.Enabled = True
+    TBPassword.Enabled = False
+    BNueva.Visible = False
+    BNueva2.Visible = True
+    BAbrir.Enabled = False
+    BCerrar.Enabled = False
+    
+  Else 
+    LResultado.Foreground = Color.Red
+    LResultado.Text = "Contraseña incorrecta."
+    TBPassword.Enabled = True
+    TBnewPassword.Enabled = False
+    
+  Endif
+    
+End
+
+Public Sub BNueva2_Click() 'AÑADIDO
+'96 No funciona contador.
+Dim contador As Integer
+
+
+
+  If (miCaja.actualizarClave(TBnewPassword.Text)) Then
+    TCarga.Start()
+    If iPasos = 7 Then 
+    TCarga.Stop()
+    Endif
+    LResultado.Foreground = Color.SoftCyan
+    LResultado.Text = "Contraseña actualizada."
+    TBnewPassword.Text = ""
+    TBPassword.Text = ""
+    TBPassword.Enabled = True
+    TBnewPassword.Enabled = False
+    BNueva2.Visible = False
+    BNueva.Visible = True
+    BAbrir.Enabled = True
+    BCerrar.Enabled = True
+    
+    Else 
+    LResultado.Foreground = Color.Red
+    LResultado.Text = "Error, la contraseña debe ser de 4 caracteres."
+    Endif 
+    
+End
+
+
+Public Sub BCerrar_Click()
+
+  
+    miCaja.cerrarCaja()
+
+    LResultado.Foreground = Color.Gray
+    LResultado.Text = "Caja fuerte cerrada."
+    BDinero.Enabled = False
+    BTotal.Enabled = False
+    TBIngresar.Enabled = False
+    LResultado2.Text = ""
+    TBIngresar.Text = ""
+End
+
+
+
+
+
+Public Sub BDinero_Click()
+
+
+  If miCaja.anadirDinero(TBIngresar.Text) Then 
+    LResultado2.Text = "Ha metido usted " & TBIngresar.Text & " €"
+    
+  Endif
+
+End
+
+Public Sub BTotal_Click()
+ 
+  LResultado2.Text = miCaja.dinero & " €"
+    
+End
+
+Public Sub TCarga_Timer()
+
+  LResultado.Text = LResultado.Text & "="
+
+End

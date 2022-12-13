@@ -1,0 +1,14 @@
+' Gambas class file
+
+Private precio As Float
+Private IVA As Float
+Private precioFinal As Float
+
+Public Sub Button1_Click()
+
+  precio = TB1.Text
+  IVA = (precio * 21) / 100
+  precioFinal = precio + IVA
+  TL2.Text = "Su precio es " & precioFinal
+  
+End

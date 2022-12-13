@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,37,39)
+  { Button1 Button
+    MoveScaled(10,9,16,4)
+    Text = ("Calcular")
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(3,4,14,3)
+    Text = ("Inserte número:")
+  }
+  { TL2 TextLabel
+    MoveScaled(5,16,26,19)
+  }
+  { TB1 TextBox
+    MoveScaled(18,3,16,4)
+  }
+}

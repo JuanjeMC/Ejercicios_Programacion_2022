@@ -1,0 +1,51 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,46,42)
+  { TL2 TextLabel
+    MoveScaled(8,21,8,3)
+    Text = ("Resta:")
+  }
+  { TL3 TextLabel
+    MoveScaled(8,25,15,3)
+    Text = ("Multiplicacion:")
+  }
+  { TL4 TextLabel
+    MoveScaled(8,29,15,3)
+    Text = ("Division:")
+  }
+  { Button1 Button
+    MoveScaled(15,35,16,4)
+    Text = ("Calcular")
+  }
+  { TLS TextLabel
+    MoveScaled(27,17,12,3)
+  }
+  { TLR TextLabel
+    MoveScaled(27,21,12,3)
+  }
+  { TLM TextLabel
+    MoveScaled(27,25,12,3)
+  }
+  { TLD TextLabel
+    MoveScaled(27,29,12,2)
+  }
+  { LResult TextLabel
+    MoveScaled(8,2,4,4)
+    Text = ("X =")
+  }
+  { TL1 TextLabel
+    MoveScaled(8,17,8,3)
+    Text = ("Suma:")
+  }
+  { LResult2 TextLabel
+    MoveScaled(8,7,4,4)
+    Text = ("Y =")
+  }
+  { TB1 TextBox
+    MoveScaled(14,1,24,4)
+  }
+  { TB2 TextBox
+    MoveScaled(14,6,24,4)
+  }
+}

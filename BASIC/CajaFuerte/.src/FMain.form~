@@ -1,0 +1,72 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,33,75)
+  Background = Color.LightGray
+  Text = ("Caja Fuerte")
+  { TBPassword TextBox
+    MoveScaled(4,7,24,4)
+  }
+  { BNueva Button
+    MoveScaled(2,42,28,4)
+    Text = ("Nueva contraseña")
+  }
+  { BAbrir Button
+    MoveScaled(2,37,28,4)
+    Text = ("Abrir caja fuerte")
+  }
+  { BCerrar Button
+    MoveScaled(2,47,28,4)
+    Text = ("Cerrar")
+  }
+  { LResultado TextLabel
+    MoveScaled(2,23,28,10)
+    Background = Color.Foreground
+    Foreground = Color.SoftGreen
+    Text = ("Inicializada")
+  }
+  { TBnewPassword TextBox
+    MoveScaled(4,16,24,4)
+    Enabled = False
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(4,4,18,3)
+    Text = ("Contraseña:")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(4,13,18,3)
+    Text = ("Nueva Contraseña:")
+  }
+  { TCarga #Timer
+    #MoveScaled(24,1)
+    Delay = 100
+  }
+  { BNueva2 Button
+    MoveScaled(2,42,28,4)
+    Visible = False
+    Text = ("Actualizar contraseña")
+  }
+  { BDinero Button
+    MoveScaled(3,62,13,4)
+    Enabled = False
+    Text = ("Dinero +")
+  }
+  { TBIngresar TextBox
+    MoveScaled(3,57,27,4)
+    Enabled = False
+  }
+  { BTotal Button
+    MoveScaled(17,62,13,4)
+    Enabled = False
+    Text = ("Total")
+  }
+  { LResultado2 TextLabel
+    MoveScaled(3,68,27,5)
+    Background = Color.Foreground
+    Foreground = Color.SoftGreen
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(3,54,9,3)
+    Text = ("Cantidad:")
+  }
+}

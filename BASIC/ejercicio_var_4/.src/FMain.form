@@ -1,0 +1,30 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,41,25)
+  { Button1 Button
+    MoveScaled(13,19,16,4)
+    Text = ("Mostrar Datos")
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(6,5,9,3)
+    Text = ("Nombre:")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(6,9,9,3)
+    Text = ("Direccion:")
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(6,13,9,3)
+    Text = ("TLF:")
+  }
+  { TL1 TextLabel
+    MoveScaled(20,5,20,3)
+  }
+  { TL2 TextLabel
+    MoveScaled(20,9,20,3)
+  }
+  { TL3 TextLabel
+    MoveScaled(20,13,20,3)
+  }
+}

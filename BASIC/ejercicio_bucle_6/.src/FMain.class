@@ -1,0 +1,14 @@
+' Gambas class file
+
+Public Sub Button1_Click()
+
+Dim cAtras As Integer
+cAtras = 20
+
+Do 
+  TL1.Text = TL1.Text & cAtras & " "
+  Dec cAtras
+Loop Until cAtras < 0
+
+  
+End
